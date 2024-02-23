@@ -1,0 +1,69 @@
+{
+  "name": "Cascade Web Assistant",
+  "version": "2.1.7",
+  "manifest_version": 3,
+  "description": "A stripped down version of the ITS Web Assistant. A helper for within Cascade",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "scripting",
+    "clipboardRead",
+    "clipboardWrite",
+    "tabs"
+  ],
+  "host_permissions": ["https://*.cascadecms.com/*"],
+  "content_scripts": [
+    {
+      "js": ["./global/content.js"],
+      "css": ["./global/main.css"],
+      "matches": ["<all_urls>"]
+    },
+
+    {
+      "js": [
+        "./cascade/modules/contentRowDetails/content.js",
+        "./cascade/modules/verboseAnchorLinks/content.js"
+      ],
+      "matches": [
+        "https://*.cascadecms.com/entity/open.act?*&type=page*",
+        "https://*.cascadecms.com/entity/open.act?*&type=block*"
+      ]
+    },
+    {
+      "js": ["./cascade/modules/kebabOnPaste/content.js"],
+      "matches": [
+        "https://*.cascadecms.com/entity/open.act?*&type=page*",
+        "https://*.cascadecms.com/entity/open.act?*&type=block*",
+        "https://*.cascadecms.com/entity/open.act?*&type=file*",
+        "https://*.cascadecms.com/entity/open.act?*&type=folder*"
+      ]
+    },
+    {
+      "js": ["./cascade/modules/showRelationships/content.js"],
+      "matches": ["https://*.cascadecms.com/entity/open.act?*&type=folder"]
+    },
+    {
+      "js": ["./cascade/modules/noWorkflow/content.js"],
+      "matches": [
+        "https://*.cascadecms.com/entity/open.act?*&type=page*",
+        "https://*.cascadecms.com/entity/open.act?*&type=block*",
+        "https://*.cascadecms.com/entity/open.act?*&type=file*",
+        "https://*.cascadecms.com/entity/open.act?*&type=folder",
+        "https://*.cascadecms.com/entity/open.act?*&action=edit"
+      ]
+    },
+
+    {
+      "js": ["./utils/alerts/content/main.js"],
+      "css": ["./utils/alerts/content/main.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "./popup/popup.html"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascade Web Assistant</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h2>Cascade API Key</h2>
+    <div>
+      <input type="text" id="apiKey" placeholder="Enter your API key" />
+      <button type="button" id="saveApiKey">Save Key</button>
+    </div>
+
+    <h3>Logs</h3>
+    <div>
+      <label>
+        Show Modal?:
+        <input type="checkbox" id="showModal" checked="" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Show Row Content Details:
+        <input type="checkbox" id="showRowContent" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Verbose Logs:
+        <input type="checkbox" id="verboseLogs" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Request Logs:
+        <input type="checkbox" id="requestLogs" />
+      </label>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+#its-assistant-window-alert {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333333;
+  border: 1px solid white;
+  border-radius: 1%;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 9999;
+}
+
+#its-assistant-window-alert.show {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,22 @@
+.global_ITS_loader {
+  border-radius: 50%;
+  background-color: #003366;
+  animation: double-bounce 2s infinite;
+  display: none;
+}
+
+@keyframes double-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+    background-color: #00666b;
+  }
+}
+
+.global_ITS_toggle {
+  display: inline-block;
+}

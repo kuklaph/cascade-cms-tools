@@ -4,10 +4,10 @@ Various resources and functions to help interact with Cascade CMS
 
 ## Other Resources
 
-**Cascade Conference 2024**  
+**Cascade Conference 2024**\
 Click [here](https://github.com/kuklaph/cascade-cms-tools/tree/main/cascade-conference-2024) if you're looking for UNCW's presentation (`The API Awakens: Unleashing Effeciency with Cascade`) resources from the 2024 Cascade Conference.
 
-**Cascade CMS API**  
+**Cascade CMS API**\
 Javascript API library - [cascade-cms-api](https://github.com/kuklaph/cascade-cms-api)
 
 ## Helper Functions
@@ -16,7 +16,7 @@ Coming soon..
 
 ## Chrome Extension
 
-Authors: @kuklaph - Philip Kukla / @ZacheryMorgan - Zachery Morgan
+Authors: [@kuklaph - Philip Kukla](https://github.com/kuklaph) / [@ZacheryMorgan - Zachery Morgan](https://github.com/zacherymorgan)
 
 This is a stripped down version of the ITS Web Assistant Chrome extension. You will need to change several items in order for it to work for your Cascade environment. This was originally created for our specific use case, so things are as modular as they could be. We are going for pure functionality to help us with our day to day tasks.
 

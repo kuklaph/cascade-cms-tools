@@ -1,4 +1,5 @@
 # Cascade CMS Tools
+
 Various resources and functions to help interact with Cascade CMS
 
 ## Other Resources
@@ -30,16 +31,18 @@ This requires a Cascade API key to function. I recommend creating an API Read On
 #### Code/File Updates
 
 - manifest.js
-    - host_permissions
-        - Add your web domain: "https://yourDomainName.edu/*"
-        - Make sure you include the wildcard/format just like above
+  - host_permissions
+    - Add your web domain: "https://yourDomainName.edu/*"
+    - Make sure you include the wildcard/format just like above
 - exports.js
-    - Scroll to bottom, update the `siteIDs` object to include your site IDs. **Note that these are not the parent folders within the site, but the actual site ID itself. These can be acquired from the `/listSites` endpoint.** The key reflects a site. Current is your production site. Feel free to add/remove the others if they aren't necessary, but you will need to make sure you do a search through the modules to make sure any references to these have been updated: `utils.siteIDs.blah` remove/update etc.
-    - Update your `domainName` and `fullDomain` **Don't include http or https**
-        - eg domainName = uncw / fullDomain = uncw.edu
+  - Scroll to bottom, update the `siteIDs` object to include your site IDs. **Note that these are not the parent folders within the site, but the actual site ID itself. These can be acquired from the `/listSites` endpoint.** The key reflects a site. Current is your production site. Feel free to add/remove the others if they aren't necessary, but you will need to make sure you do a search through the modules to make sure any references to these have been updated: `utils.siteIDs.blah` remove/update etc.
+  - Update your `domainName` and `fullDomain` **Don't include http or https**
+    - eg domainName = uncw / fullDomain = uncw.edu
 
-#### Extension Has Been Added To Browser
+#### Add Extension To Browser
 
-I'm not going to write up how to add a local extension for the browser as there are plenty of examples online and they are different for each browser. But once it's loaded, you'll want to click the popup and load in your Cascade API.
+This can be added to Chromium based browsers (e.g. Chrome/edge etc). To add to your browser go to your extensions area ([insert browser here] edge://extensions/) Toggle on Developer mode. Then you can click `Load Unpacked` and navigate to the top level `chrome` folder. Once it's loaded, you'll want to click the popup and load in your Cascade API.
+
+If you want to use in Firefox, you would need to create a manifest file that matches that of Firefox requirements and in theory it should still work.
 
 Make sure to refresh any web page you had open otherwise you'll be working on the old preloaded page that doesn't actually have any of the code from the extension. This applies to any updates you make to the extension in the future as well. Update Code? > refresh extension (don't need to remove, just click the refresh button in your `browser://extension` dev settings) > refresh page(s) > always

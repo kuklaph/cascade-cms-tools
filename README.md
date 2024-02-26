@@ -16,6 +16,8 @@ Coming soon..
 
 ## Chrome Extension
 
+Authors: @kuklaph - Philip Kukla / @ZacheryMorgan - Zachery Morgan
+
 This is a stripped down version of the ITS Web Assistant Chrome extension. You will need to change several items in order for it to work for your Cascade environment. This was originally created for our specific use case, so things are as modular as they could be. We are going for pure functionality to help us with our day to day tasks.
 
 Because Cascade environments can be very different, some modules may not work at all. These will need to either be updated or just simply deleted if you don't need/want them.
